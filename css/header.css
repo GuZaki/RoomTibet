@@ -1,0 +1,36 @@
+.header {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white-text);
+    width: 100%;
+    z-index: 10;
+}
+
+.header__logo {
+    flex-shrink: 0; /*запрет на сужение картинки логотипа*/
+}
+
+.header__inner{   
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__content {
+    display: flex;
+    gap: 49px;
+    align-items: center;
+}
+
+.nav-menu__list {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav-menu__link:hover {
+    color: var(--green-bg);
+}
+

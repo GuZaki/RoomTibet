@@ -1,0 +1,41 @@
+/*кнопки-ссылки*/
+
+/*общий стиль*/
+.btn {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    border-radius: 4px;
+}
+
+/*размеры*/
+.btn-s {
+    padding: 12px 24px;
+}
+
+.btn-l {
+    padding: 16px 36px;
+}
+
+/*цвета*/
+.btn-green {
+    color: var(--white-text);
+    background-color: var(--green-bg);
+}
+
+.btn-green:hover {
+    color: var(--green-bg);
+    background-color: var(--white-text);
+}
+
+.btn-white {
+    color: var(--green-bg);
+    background-color: var(--white-text);
+}
+
+.btn-white:hover {
+    color: var(--white-text);
+    background-color: var(--green-bg);
+}
