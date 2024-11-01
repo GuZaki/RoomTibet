@@ -1,5 +1,5 @@
-@import '/css/general.css';
-@import '/css/buttons.css';
-@import '/css/header.css';
-@import '/css/promo.css';
-@import '/css/footer.css';
+@import '../css/general.css';
+@import '../css/buttons.css';
+@import '../css/header.css';
+@import '../css/promo.css';
+@import '../css/footer.css';
