@@ -5,15 +5,18 @@
 
 .footer__top-inner {
     display: flex; 
+    justify-content: space-between;
     gap: 20px; 
-    padding: 178px 0 80px;  
+    padding-top: 178px; 
+    padding-bottom: 80px;
 }
 
 .footer__company-info {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 0px 35px 0px 0px;
+    max-width: 480px;
+    padding-top: 35px;
 }
 
 .footer__title {
@@ -47,17 +50,19 @@
     gap: 16px;
 }
 
-.footer__list {
+/* .footer__list {
     display: flex;
     gap: 120px;
-}
+} */
 
 .footer__services-list {
     flex: 1;
+    max-width: 280px;
 }
 
 .footer__travel-list {
     flex: 1;
+    max-width: 280px;
 }
 
 .menu {
