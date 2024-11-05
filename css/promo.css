@@ -7,15 +7,15 @@
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
-    height: 985px; /*70em*/
+    height: 100dvh; 
+    min-height: 600px;
     color: var(--white-text);
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 82px;
 }
 
 .promo__inner {
-    position: absolute;
-    left: 50%;
-    bottom: 82px;
-    transform: translateX(-50%);
     width: 100%;
 }
 
