@@ -27,7 +27,7 @@
 }
 
 .video-front::before {
-    content: url('/images/about/player.svg');
+    content: url('../images/about/player.svg');
     position: absolute;
     top: 50%;
     left: 50%;

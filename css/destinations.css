@@ -29,15 +29,15 @@
 }
 
 .card:nth-child(1) {
-    background-image: url('/images/destinations/destinations_card1.jpg');
+    background-image: url('../images/destinations/destinations_card1.jpg');
 }
 
 .card:nth-child(2) {
-    background-image: url('/images/destinations/destinations_card2.jpg');
+    background-image: url('../images/destinations/destinations_card2.jpg');
 }
 
 .card:nth-child(3) {
-    background-image: url('/images/destinations/destinations_card3.jpg');
+    background-image: url('../images/destinations/destinations_card3.jpg');
 }
 
 .card::before {
