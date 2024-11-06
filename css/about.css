@@ -1,0 +1,54 @@
+.about {
+    padding: 100px 0;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.about__video {
+    position: relative;
+    flex: 1;
+    max-width: 480px;
+}
+
+.video-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-front {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.video-front::before {
+    content: url('/images/about/player.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.video-img {
+    border-radius: 24px;
+}
+
+.about__content {
+    padding: 64px 0;
+    flex: 1;
+    max-width: 580px;
+}
+
+.about__title {
+    margin-bottom: 40px;
+}
+
+.about__text {
+    margin-bottom: 40px;
+}

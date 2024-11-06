@@ -2,6 +2,7 @@
 
 /*общий стиль*/
 .btn {
+    display: inline-block;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
@@ -26,8 +27,7 @@
 }
 
 .btn-green:hover {
-    color: var(--green-bg);
-    background-color: var(--white-text);
+    opacity: 0.8;
 }
 
 .btn-white {
