@@ -54,15 +54,15 @@
 }
 
 .card:nth-child(1)::before {
-    content: url('/images/destinations/star1.svg');
+    content: url('../images/destinations/star1.svg');
 }
 
 .card:nth-child(2)::before {
-    content: url('/images/destinations/star2.svg');
+    content: url('../images/destinations/star2.svg');
 }
 
 .card:nth-child(3)::before {
-    content: url('/images/destinations/star3.svg');
+    content: url('../images/destinations/star3.svg');
 }
 
 .card__content {
