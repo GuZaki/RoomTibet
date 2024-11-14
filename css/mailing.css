@@ -1,0 +1,72 @@
+.mailing {
+    border-radius: 6px;
+    padding: 40px 100px;
+    box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
+    position: relative;
+    top: 98px;
+    background-color: var(--white-text);
+}
+
+.mailing__inner {
+    display: grid;
+    grid-template-columns: 380px 536px;
+    justify-content: space-between;
+}
+
+.mailing__title-group {
+    margin-bottom: 0;
+}
+
+.mailing__slogan {
+    font-size: 18px;
+}
+
+.mailing__subtitle{
+    font-size: 26px;
+}
+
+.mailing__form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.mailing__form-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+}
+
+input[type='email'] {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 12px 16px;
+    width: 280px;
+    outline-color: var(--green-bg);
+    background-color: var(--grey-bg);
+    margin-top: 8px;
+}
+
+input[type='email']::placeholder {
+    color: var(--black-bg);
+}
+
+.mailing__pdp-policy {
+    font-weight: 600;
+    line-height: 129%;
+}
+
+.mailing__pdp-policy-link {
+    text-decoration: underline;
+}
+
+.mailing__pdp-policy-link:hover {
+    color: var(--yellow-text);
+}

@@ -54,19 +54,18 @@
                 <div class="form__wrapper">
                     <select class="select" name="location" id="location-select">
                         <option selected>Локация для тура</option>
-                        <option value="sea">Море</option>
-                        <option value="mountain">Горы</option>
-                        <option value="lake">Озеро</option>
-                        <option value="river">Река</option>
+                        <option value="location-1">Локация 1</option>
+                        <option value="location-2">Локация 2</option>
+                        <option value="location-3">Локация 3</option>
+                        <option value="location-4">Локация 4</option>
                     </select>
 
                     <span class="form__hint">выберите из списка</span>
                 </div>
 
                 <div class="form__wrapper-date">
-                    <label class="select select-date">Дата похода 
-                        <input type="date">
-                    </label>
+                    <label class="select-date" for="date">Дата похода</label> 
+                    <input class="input-date" type="text" id="date" disabled>
                     
                     <span class="form__hint">укажите диапазон</span>
                 </div>
@@ -94,13 +93,18 @@
                 <div class="video-back">
                     <img class="video-img" src="./images/about/about_back.jpg" alt="Задняя картинка">
                 </div>
-                <div class="video-front">
-                    <img class="video-img" src="./images/about/about_front.jpg" alt="Передняя картинка">
+                <div class="video-front">  
+                    <a class="video-link" href="">
+                       <img class="video-img" src="./images/about/about_front.jpg" alt="Передняя картинка"> 
+                    </a>
                 </div>
             </div>
             <div class="about__content">
-                <p class="slogan">о нашем походе</p>
-                <h2 class="about__title subtitle">Исследуйте все горные массивы мира вместе с нами</h2>
+                <div class="title-group">
+                    <p class="slogan">о нашем походе</p>
+                    <h2 class="subtitle">Исследуйте все горные массивы мира вместе с нами</h2>
+                </div>
+                
                 <p class="about__text text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.</p>
                 <a class="btn btn-green btn-l" href="#">Программа тура</a>
             </div>
@@ -110,8 +114,11 @@
     <section class="programs">
         <div class="container programs__inner">
             <div class="programs__content">
-                <p class="slogan">наше предложение</p>
-                <h2 class="programs__title subtitle">Лучшие программы для тебя</h2>
+                <div class="title-group">
+                    <p class="slogan">наше предложение</p>
+                    <h2 class="programs__title subtitle">Лучшие программы для тебя</h2>
+                </div>
+                
                 <p class="programs__text text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
 
                 <ul class="programs__list">
@@ -159,13 +166,14 @@
 
     <section class="destinations">
         <div class="container destinations__inner">
-            <div class="title-group">
+            <div class="title-group-center">
                 <p class="slogan">по версии отдыхающих</p>
                 <h2 class="destinations__title subtitle">Популярные направления</h2>
             </div>
             
-            <ul class="destinations__list">
-                <li class="destinations__item card">
+            <div class="destinations__list">
+                <a class="destinations__item card" href="#">
+                    <span>4.9</span>
                     <div class="card__content">
                         <div class="card__about">
                             <p class="card-title">Озеро возле гор</p>
@@ -173,8 +181,10 @@
                         </div>
                         <div class="card__price">480 $</div>
                     </div>
-                </li>
-                <li class="destinations__item card">
+                </a>
+                    
+                <a class="destinations__item card" href="#">
+                    <span>4.5</span>
                     <div class="card__content">
                         <div class="card__about">
                             <p class="card-title">Ночь в горах</p>
@@ -182,8 +192,10 @@
                         </div>
                         <div class="card__price">500 $</div>
                     </div>
-                </li>
-                <li class="destinations__item card">
+                </a>
+
+                <a class="destinations__item card" href="#">
+                    <span>5.0</span>
                     <div class="card__content">
                         <div class="card__about">
                             <p class="card-title">Йога в горах</p>
@@ -191,9 +203,182 @@
                         </div>
                         <div class="card__price">230 $</div>
                     </div>
-                </li>
-            </ul>
+                </a>
+            </div>
+
             <a class="btn btn-green btn-l" href="#">Рейтинг направлений</a>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container blog__inner">
+            <div class="title-group-center">
+                <p class="slogan">делимся впечатлениями</p>
+                <h2 class="programs__title subtitle">Блог о путешествиях</h2>
+            </div>
+        
+            <div class="blog__contenet">
+                <article class="article">
+                    <picture class="article__img">
+                        <source srcset="images/blog/blog_card1@2x.jpg" media="(max-width: 800px)">
+                        <img src="images/blog/blog_card1.jpg" alt="">
+                    </picture>
+
+                    <div class="article__wrapper">
+                        <a class="article__contenet-link" href="#">
+                            <h3 class="article__title">Красивая Италия, какая она в реальности?</h3>
+                            <p class="article__text">Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.</p>
+                        </a>     
+                        <div class="article__footer">
+                            <span class="article__date">01/04/2023</span>
+                            <a class="article__link" href="#">читать статью</a>
+                        </div>
+                    </div>
+                </article> 
+
+                <article class="article">
+                    <picture class="article__img">
+                        <source srcset="images/blog/blog_card2@2x.jpg" media="(max-width: 800px)">
+                        <img src="images/blog/blog_card2.jpg" alt="">
+                    </picture>
+
+                    <div class="article__wrapper">
+                        <a class="article__contenet-link" href="#">
+                            <h3 class="article__title">Долой сомнения! Весь мир открыт для вас!</h3>
+                            <p class="article__text">Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ...Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ...</p>
+                        </a>    
+                        <div class="article__footer">
+                            <span class="article__date">01/04/2023</span>
+                            <a class="article__link" href="#">читать статью</a>
+                        </div> 
+                    </div>
+                </article>
+            
+                <article class="article">
+                    <picture class="article__img">
+                        <source srcset="images/blog/blog_card3@2x.jpg" media="(max-width: 800px)">
+                        <img src="images/blog/blog_card3.jpg" alt="">
+                    </picture>
+
+                    <div class="article__wrapper">
+                        <a class="article__contenet-link" href="#">
+                            <h3 class="article__title">Как подготовиться к путешествию в одиночку? </h3>
+                            <p class="article__text">Для современного мира базовый вектор развития предполагает.</p>
+                        </a>    
+                        <div class="article__footer">
+                            <span class="article__date">01/04/2023</span>
+                            <a class="article__link" href="#">читать статью</a>
+                        </div>
+                    </div>
+                </article>
+            
+                <article class="article">
+                    <picture class="article__img">
+                        <source srcset="images/blog/blog_card4@2x.jpg" media="(max-width: 800px)">
+                        <img src="images/blog/blog_card4.jpg" alt="">
+                    </picture>
+
+                    <div class="article__wrapper">
+                        <a class="article__contenet-link" href="#">
+                            <h3 class="article__title">Индия ... летим?</h3>
+                            <p class="article__text">Для современного мира базовый.</p>
+                        </a>   
+
+                        <div class="article__footer">
+                            <span class="article__date">01/04/2023</span>
+                            <a class="article__link" href="#">читать статью</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <a class="btn btn-green btn-l" href="#">Другие материалы</a>
+        </div>
+    </section>
+
+    <section class="pinterest">
+        <div class="container pinterest__inner">
+                <div class="title-group-center">
+                    <p class="slogan">фото-отчет</p>
+                    <h2 class="destinations__title subtitle">Делимся впечатлениями</h2>
+                </div>
+
+            <div class="pinterest__content">
+                <div class="pinterest__content-item">
+                    <a href="" class="pinterest__link">
+                        <picture class="pinterest__img">
+                            <source srcset="images/pinterest/pinterest_1@2x.jpg" media="(max-width: 800px)">
+                            <img src="images/pinterest/pinterest_1.jpg" alt="Фото 1">
+                        </picture>
+                    </a>
+                </div>
+                <div class="pinterest__content-item">
+                    <a href="" class="pinterest__link">
+                        <picture class="pinterest__img">
+                            <source srcset="images/pinterest/pinterest_2@2x.jpg" media="(max-width: 800px)">
+                            <img src="images/pinterest/pinterest_2.jpg" alt="Фото 2">
+                        </picture>
+                    </a>
+                </div>
+                <div class="pinterest__content-item">
+                    <a href="" class="pinterest__link">
+                        <picture class="pinterest__img">
+                            <source srcset="images/pinterest/pinterest_3@2x.jpg" media="(max-width: 800px)">
+                            <img src="images/pinterest/pinterest_3.jpg" alt="Фото 3">
+                        </picture>
+                    </a>
+                </div>
+                <div class="pinterest__content-item">
+                    <a href="" class="pinterest__link">
+                        <picture class="pinterest__img">
+                            <source srcset="images/pinterest/pinterest_4@2x.jpg" media="(max-width: 800px)">
+                            <img src="images/pinterest/pinterest_4.jpg" alt="Фото 4">
+                        </picture>
+                    </a>
+                </div>
+                <div class="pinterest__content-item">
+                    <a href="" class="pinterest__link">
+                        <picture class="pinterest__img">
+                            <source srcset="images/pinterest/pinterest_5@2x.jpg" media="(max-width: 800px)">
+                            <img src="images/pinterest/pinterest_5.jpg" alt="Фото 5">
+                        </picture>
+                    </a>
+                </div>
+                <div class="pinterest__content-item">
+                    <a href="" class="pinterest__link">
+                        <picture class="pinterest__img">
+                            <source srcset="images/pinterest/pinterest_6@2x.jpg" media="(max-width: 800px)">
+                            <img src="images/pinterest/pinterest_6.jpg" alt="Фото 6">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+
+            <a class="btn btn-green btn-l" href="#">Наш pinterest</a>
+        </div>
+    </section>
+
+    <section class="mailing container">
+        <div class=" mailing__inner">
+            <div class="mailing__left">
+                <div class="mailing__title-group">
+                    <p class="slogan mailing__slogan">актуально</p>
+                    <h2 class="subtitle mailing__subtitle">Получайте полезные рассылки о путешествиях</h2>
+                </div>
+            </div>
+            <div class="mailing__rigth">
+                <form class="mailing__form" action="">
+                    <label class="mailing__form-label">Введите e-mail адрес
+                       <input type="email" placeholder="name@domain.com"> 
+                    </label>
+                    
+                    <button class="btn btn-green btn-s btn-form">Подписаться на новости</button>
+                </form>    
+                <span class="mailing__pdp-policy">подписываясь на новости, вы автоматически соглашаетесь 
+                    <a class="mailing__pdp-policy-link" href="#">с условиями обработки персональных данных</a> и 
+                    <a class="mailing__pdp-policy-link" href="#">правилами рекламных рассылок</a>
+                </span>
+            </div>
         </div>
     </section>
 

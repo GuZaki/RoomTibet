@@ -9,6 +9,7 @@
 }
 
 .about__video {
+    min-height: 526px;
     position: relative;
     flex: 1;
     max-width: 480px;
@@ -22,17 +23,20 @@
 
 .video-front {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 126px;
+    left: 130px;
 }
 
-.video-front::before {
+.video-link::before {
     content: url('../images/about/player.svg');
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
+}
+
+.video-link:hover::before {
+    opacity: 0.4;
 }
 
 .video-img {
@@ -43,10 +47,6 @@
     padding: 64px 0;
     flex: 1;
     max-width: 580px;
-}
-
-.about__title {
-    margin-bottom: 40px;
 }
 
 .about__text {

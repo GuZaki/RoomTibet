@@ -1,5 +1,9 @@
 /*Заголовки и параграфы*/
 .title-group {
+    margin-bottom: 40px;
+}
+
+.title-group-center {
     text-align: center;
 }
 
