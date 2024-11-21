@@ -11,22 +11,22 @@
 
 .pinterest__content {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 20px;
 }
 
 .pinterest__content-item:first-child,
 .pinterest__content-item:nth-child(5) {
-    grid-column: span 6;
+    grid-column: span 2;
 }
 
 .pinterest__content-item {
-    grid-column: span 3;
+    grid-column: span 1;
 }
 
 .pinterest__content-item:hover {
-    transform: scale(1.1);
+    filter: brightness(70%);
     transition-duration: 2s;
 }
 
