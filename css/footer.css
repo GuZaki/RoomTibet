@@ -4,18 +4,12 @@
 }
 
 .footer__top-inner {
-    display: flex; 
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 450px 280px 280px;
     gap: 20px; 
     padding-top: 178px; 
     padding-bottom: 80px;
-}
-
-.footer__company-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    max-width: 480px;
 }
 
 .footer__title {
@@ -32,7 +26,7 @@
 .footer__links {
     display: flex;
     gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .footer__link {
@@ -47,21 +41,6 @@
     height: 32px;
     display: flex;
     gap: 16px;
-}
-
-/* .footer__list {
-    display: flex;
-    gap: 120px;
-} */
-
-.footer__services-list {
-    flex: 1;
-    max-width: 280px;
-}
-
-.footer__travel-list {
-    flex: 1;
-    max-width: 280px;
 }
 
 .menu {
@@ -119,7 +98,8 @@
 .footer__bottom-inner {
     display: flex;
     justify-content: space-between;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .footer__pdp-policy-link {
@@ -128,4 +108,29 @@
 
 .footer__pdp-policy-link:hover {
     color: var(--yellow-text);
+}
+
+/*адаптив*/
+@media screen and (max-width: 1080px) {
+    .footer__top-inner {
+        grid-template-columns: repeat(auto-fit, minmax(325px, 900px)); 
+        gap: 50px;   
+    }
+
+    .footer__text {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__bottom-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__top-inner {
+        padding-top: 50px; 
+    }
 }

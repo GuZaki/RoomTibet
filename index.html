@@ -17,7 +17,10 @@
             </a>
 
             <div class="header__content">
-                <nav class="header__menu nav-menu">
+                <input class="burger-checkbox" type="checkbox" id="burger-checkbox">
+                <label class="burger" for="burger-checkbox"></label>
+            
+                <nav class="header__menu nav-menu ">
                     <ul class="nav-menu__list">
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">Главная</a>
@@ -40,7 +43,7 @@
                     </ul>
                 </nav>
 
-                <a class="btn btn-green btn-s" href="tel:+7(123)456-78-90">Консультация</a>
+                <a class="header__btn btn btn-green btn-s" href="tel:+7(123)456-78-90">Консультация</a>
             </div>
         </div>
     </header>
@@ -51,41 +54,43 @@
             <p class="promo__title">Насладись прогулкой в горах с командой единомышленников</p>
 
             <form class="promo__form form" action="">
-                <div class="form__wrapper">
-                    <select class="select" name="location" id="location-select">
-                        <option selected>Локация для тура</option>
-                        <option value="location-1">Локация 1</option>
-                        <option value="location-2">Локация 2</option>
-                        <option value="location-3">Локация 3</option>
-                        <option value="location-4">Локация 4</option>
-                    </select>
+                <div class="form__inputs">
+                    <div class="form__wrapper">
+                        <select class="select" name="location" id="location-select">
+                            <option selected>Локация для тура</option>
+                            <option value="location-1">Локация 1</option>
+                            <option value="location-2">Локация 2</option>
+                            <option value="location-3">Локация 3</option>
+                            <option value="location-4">Локация 4</option>
+                        </select>
 
-                    <span class="form__hint">выберите из списка</span>
-                </div>
+                        <span class="form__hint">выберите из списка</span>
+                    </div>
 
-                <div class="form__wrapper-date">
-                    <label class="select-date" for="date">Дата похода</label> 
-                    <input class="input-date" type="text" id="date" disabled>
+                    <div class="form__wrapper-date">
+                        <label class="select-date" for="date">Дата похода</label> 
+                        <input class="input-date" type="text" id="date" disabled>
+                        
+                        <span class="form__hint">укажите диапазон</span>
+                    </div>
                     
-                    <span class="form__hint">укажите диапазон</span>
+                    <div class="form__wrapper">
+                        <select class="select" name="participants" id="participants-select">
+                            <option selected>Участники</option>
+                            <option value="participants-1">Группа 1</option>
+                            <option value="participants-2">Группа 2</option>
+                            <option value="participants-3">Группа 3</option>
+                            <option value="participants-4">Группа 4</option>
+                        </select>
+
+                        <span class="form__hint">минимум 4 человека</span>
+                    </div> 
                 </div>
                 
-                <div class="form__wrapper">
-                    <select class="select" name="participants" id="participants-select">
-                        <option selected>Участники</option>
-                        <option value="participants-1">Группа 1</option>
-                        <option value="participants-2">Группа 2</option>
-                        <option value="participants-3">Группа 3</option>
-                        <option value="participants-4">Группа 4</option>
-                    </select>
-
-                    <span class="form__hint">минимум 4 человека</span>
-                </div>
-
                 <button class="promo__btn btn btn-white btn-l" type="submit">Найти программу</button>
             </form>
         </div>
-    </section>
+    </section> 
 
     <section class="about">
         <div class="container about__inner">
@@ -95,7 +100,7 @@
                 </div>
                 <div class="video-front">  
                     <a class="video-link" href="">
-                       <img class="video-img" src="./images/about/about_front.jpg" alt="Передняя картинка"> 
+                        <img class="video-img" src="./images/about/about_front.jpg" alt="Передняя картинка"> 
                     </a>
                 </div>
             </div>
@@ -106,10 +111,13 @@
                 </div>
                 
                 <p class="about__text text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.</p>
-                <a class="btn btn-green btn-l" href="#">Программа тура</a>
+                <div class="btn-flex">
+                    <a class="btn btn-green btn-l" href="#">Программа тура</a> 
+                </div>
+                
             </div>
         </div>
-    </section>
+    </section> 
 
     <section class="programs">
         <div class="container programs__inner">
@@ -144,8 +152,9 @@
                         </div>
                     </li>
                 </ul>
-
-                <a class="btn btn-green btn-l" href="#">Стоимость программ</a>
+                <div class="btn-flex">
+                    <a class="btn btn-green btn-l" href="#">Стоимость программ</a>
+                </div>
             </div>
             <div class="programs__img">
                 <div class="programs__img-item">
@@ -164,7 +173,7 @@
         </div>
     </section>
 
-    <section class="destinations">
+    <!-- <section class="destinations">
         <div class="container destinations__inner">
             <div class="title-group-center">
                 <p class="slogan">по версии отдыхающих</p>
@@ -205,8 +214,9 @@
                     </div>
                 </a>
             </div>
-
-            <a class="btn btn-green btn-l" href="#">Рейтинг направлений</a>
+            <div class="btn-flex">
+                <a class="btn btn-green btn-l" href="#">Рейтинг направлений</a>
+            </div>
         </div>
     </section>
 
@@ -291,8 +301,9 @@
                     </div>
                 </article>
             </div>
-
-            <a class="btn btn-green btn-l" href="#">Другие материалы</a>
+            <div class="btn-flex">
+                <a class="btn btn-green btn-l" href="#">Другие материалы</a>
+            </div>
         </div>
     </section>
 
@@ -353,8 +364,9 @@
                     </a>
                 </div>
             </div>
-
-            <a class="btn btn-green btn-l" href="#">Наш pinterest</a>
+            <div class="btn-flex">
+                <a class="btn btn-green btn-l" href="#">Наш pinterest</a>
+            </div>
         </div>
     </section>
 
@@ -369,7 +381,7 @@
             <div class="mailing__rigth">
                 <form class="mailing__form" action="">
                     <label class="mailing__form-label">Введите e-mail адрес
-                       <input type="email" placeholder="name@domain.com"> 
+                        <input type="email" placeholder="name@domain.com"> 
                     </label>
                     
                     <button class="btn btn-green btn-s btn-form">Подписаться на новости</button>
@@ -380,7 +392,7 @@
                 </span>
             </div>
         </div>
-    </section>
+    </section>  -->
 
     <footer class="footer">
         <div class="footer__top">
@@ -417,7 +429,8 @@
                             </svg>
                         </a>
                     </div>
-                </div>        
+                </div>
+
                 <div class="footer__services-list">
                     <h3 class="footer__title">Наши услуги</h3>
 
@@ -461,9 +474,7 @@
                         </li>
                     </ul>
                 </div>
-                </div>
-
-            
+            </div>            
         </div>
         
         <div class="footer__bottom">

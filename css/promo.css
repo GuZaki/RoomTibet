@@ -33,10 +33,17 @@
     display: flex;
     gap: 24px;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: 40px 43px;
     backdrop-filter: blur(6px);
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+}
+
+.form__inputs {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .select {
@@ -63,6 +70,7 @@ option {
 .form__wrapper {
     position: relative;
 }
+
 
 .form__wrapper::after {
     content: url('../images/promo/arrow-down.svg');
@@ -113,4 +121,51 @@ option {
 
 .promo__btn {
     flex-shrink: 0;
+}
+
+/*адаптив*/
+@media screen and (max-width: 1280px) {
+    .form {
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .form__inputs {
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .promo__title {
+        font-size: 45px;
+    }
+    
+    .form {
+        background: none;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .form__inputs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promo__title {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .promo{
+        height: auto;
+    }
+
+    .promo__title {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
 }

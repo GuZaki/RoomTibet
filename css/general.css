@@ -114,3 +114,11 @@ section {
     overflow: hidden;
 }
 
+/*адаптив*/
+@media screen and (max-width: 480px) {
+    section {
+        padding: 50px 0 50px;
+    }
+}
+
+

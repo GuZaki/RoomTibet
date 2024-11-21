@@ -1,6 +1,6 @@
 .header {
     position: absolute;
-    top: 16px;
+    top: 15px;
     color: var(--white-text);
     width: 100%;
     z-index: 10;
@@ -32,3 +32,137 @@
     color: var(--green-bg);
 }
 
+/*бургер меню*/
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+}
+
+.burger-checkbox {
+    appearance: none;
+    margin: 0; 
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--white-text);
+  z-index: 10;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 var(--white-text);
+}
+
+.burger::after {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0,0,0,0);
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  width: 100%;
+  transform: rotate(-45deg);
+  transition: bottom .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked ~ .nav-menu {
+    transform: translateX(0);
+}
+
+
+/*адаптив*/
+@media screen and (max-width: 1050px) {
+    .header__inner{   
+        padding: 0 50px;
+    }
+
+    .header__btn {
+        display: none;
+    }  
+
+    .burger {
+        display: block;
+    }
+
+    .nav-menu {
+        top: -15px;
+        right: 0;
+        position: fixed;
+        flex-direction: column;
+        gap: 15px;
+        padding: 50px 115px 50px 15px;
+        background: var(--green-bg);
+        transform: translateX(100%);
+        transition: .3s;
+        min-width: 288px;
+        height: 70dvh;
+    }
+
+    .nav-menu__list {
+        flex-direction: column;
+    }
+
+    .nav-menu__link {
+        display: block;
+        color: var(--white-text);
+        font-size: 18px;
+    }
+
+    .nav-menu__link::before {
+        content: url("../images/footer/arrow.svg");
+        margin-right: 8px;
+        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='14' viewBox='0 0 10 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_10289_239)'%3e%3cpath d='M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z' fill='%23FDFDFD'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_10289_239'%3e%3crect width='9.87491' height='14' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    }
+    
+    .nav-menu__link:hover::before {
+        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='14' viewBox='0 0 10 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_10289_239)'%3e%3cpath d='M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z' fill='%23f2be22'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_10289_239'%3e%3crect width='9.87491' height='14' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    }
+
+    .nav-menu__link:hover {
+        color: var(--yellow-text);
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__logo {
+        width: 84px;
+        height: 44px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .header__inner{   
+        padding: 0 15px;
+    }
+    
+    .burger {
+        width: 30px; 
+    }
+
+    .nav-menu {
+        padding-right: 15px;
+    }
+}

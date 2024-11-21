@@ -23,3 +23,22 @@
 .text {
     font-size: 18px;
 }
+
+/*адаптив*/
+@media screen and (max-width: 480px) {
+    .title-group {
+        margin-bottom: 24px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}

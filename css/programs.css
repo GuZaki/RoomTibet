@@ -64,3 +64,28 @@
 .programs__img-item:last-child > img {
     border-radius: 0 50px;
 }
+
+
+@media screen and (max-width: 1120px) {
+    .programs__inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .programs__content {
+        max-width: 100%;
+    }
+
+    .programs__text {
+        margin-bottom: 30px;
+    }
+    
+    .programs__img {
+        display: none;
+    }
+
+    .programs__list {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+}
