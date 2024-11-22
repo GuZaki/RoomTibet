@@ -23,11 +23,23 @@
 
 .pinterest__content-item {
     grid-column: span 1;
+    position: relative;
+    cursor: pointer;
 }
 
 .pinterest__content-item:hover {
     filter: brightness(70%);
     transition-duration: 2s;
+}
+
+.pinterest__content-item:hover::before {
+    position: absolute;
+    content: url('../images/pinterest/zoom-in-light.svg');
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .pinterest__img > img {
