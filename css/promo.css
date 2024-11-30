@@ -71,7 +71,6 @@ option {
     position: relative;
 }
 
-
 .form__wrapper::after {
     content: url('../images/promo/arrow-down.svg');
     position: absolute;
@@ -103,15 +102,8 @@ option {
     padding: 14px 16px;
 }
 
-.form__wrapper-date {
-    position: relative;
-}   
-
-.form__wrapper-date::after{
+.form__wrapper:nth-child(2):after{
     content: url('../images/promo/date.svg');
-    position: absolute;
-    right: 14px;
-    top: 16px;
 }  
 
 .form__hint {
@@ -122,40 +114,33 @@ option {
 .promo__btn {
     flex-shrink: 0;
 }
+.promo__link {
+    display: none;
+}
 
 /*адаптив*/
 @media screen and (max-width: 1280px) {
-    .form {
-        justify-content: center;
-        padding-left: 10px;
-        padding-right: 10px;
+    .form__wrapper {
+        width: 48%;
     }
 
-    .form__inputs {
+    .select,
+    .input-date {
         width: 100%;
-        gap: 10px;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    .promo__title {
-        font-size: 45px;
-    }
-    
-    .form {
-        background: none;
-        padding: 0;
-        justify-content: flex-start;
-    }
-
-    .form__inputs {
-        display: none;
     }
 }
 
 @media screen and (max-width: 768px) {
     .promo__title {
         font-size: 35px;
+    }
+
+    .form {
+        display: none;
+    }
+
+    .promo__link {
+        display: inline-block;
     }
 }
 

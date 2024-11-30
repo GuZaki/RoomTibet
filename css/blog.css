@@ -13,6 +13,7 @@
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+    overflow: scroll;
 }
 
 .article {
@@ -30,12 +31,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
     flex: 1;
-    max-width: 294px;
 }
 
 .article__img {
-    border-radius: 6px; /*source для picture ???*/
+    border-radius: 6px;
 }
 
 .article__img > img {
@@ -49,6 +50,10 @@
     margin-bottom: 25px;
 }
 
+.article__contenet-link{
+    overflow: hidden;
+}
+
 .article__contenet-link:hover .article__title {
     text-decoration: underline;
     text-decoration-skip-ink: none;
@@ -58,7 +63,6 @@
 .article__text {
     max-height: 116px;
     text-overflow: ellipsis;
-    /* white-space: nowrap; ???*/
     overflow: hidden;
     line-height: 143%;
 }
@@ -84,4 +88,35 @@
     text-decoration: underline;
 }
 
+/*адаптив*/
+@media screen and (max-width: 1280px) {
+    .article__wrapper {
+        padding: 0;  
+    }
+}
+ 
+@media screen and (max-width: 1024px) {
+    .blog__contenet  {
+        grid-template-columns: repeat(4, 40%);        
+    }
 
+    .article {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 0;
+    } 
+
+    .article__wrapper {
+        padding: 15px;  
+        gap: 15px;
+    }
+
+    .article__img > img {
+        border-radius: 6px 6px 0 0;
+    }
+
+    .article__title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}

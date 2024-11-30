@@ -19,8 +19,8 @@
 
 .video-front {
     position: absolute;
-    top: 126px;
-    left: 130px;
+    bottom: 0;
+    right: 0;
 }
 
 .video-link::before {
@@ -49,29 +49,27 @@
     margin-bottom: 40px;
 }
 
-@media screen and (max-width: 1050px) {
+/*адаптив*/
+@media screen and (max-width: 768px) {
     .about__inner {
         flex-direction: column-reverse;
-    }
-
+    } 
+ 
     .about__video {
-        min-height: auto;
+        max-width: 100%;
     }
 
     .video-back {
-        display: none;
+        left: 50px;
     }
     
     .video-front {
-        position: relative;
-        top: 0;
-        left: 0;
+        right: 50px;
     }
-
+    
     .about__content {
         max-width: 100%;
     }
-    
 }
 
 @media screen and (max-width: 480px) {
@@ -83,7 +81,21 @@
         padding: 0;
     }
 
+    .about__video {
+        min-height: 395px; 
+    }
+
     .about__text {
         margin-bottom: 24px;
     }
+
+    .video-front {
+        left: 50%;
+        transform: translate(-50%);
+        width: 345px;
+    }
+
+    .video-back {
+        display: none;
+    } 
 }

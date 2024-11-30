@@ -111,26 +111,54 @@
 }
 
 /*адаптив*/
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1280px) {
     .footer__top-inner {
-        grid-template-columns: repeat(auto-fit, minmax(325px, 900px)); 
+        grid-template-columns: repeat(2, 1fr);
         gap: 50px;   
+    }
+
+    .footer__company-info {
+        grid-column: 1 / span 2;
+    }
+
+    .footer__services-list {
+        grid-area: 2 / 1;
+    }
+
+    .footer__travel-list {
+        grid-area: 2 / 2;
     }
 
     .footer__text {
         margin-bottom: 30px;
     }
 }
-
+ 
 @media screen and (max-width: 768px) {
+    .footer__top-inner {
+        gap: 50px;  
+    }
+
+    .footer__services-list {
+        grid-area: 1 / 1;
+    }
+
+    .footer__services-list {
+        grid-area: 2 / span 2;
+    }
+
+    .footer__travel-list {
+        grid-area: 3 / span 2 ;
+    }
+
     .footer__bottom-inner {
         flex-direction: column;
         align-items: center;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .footer__top-inner {
         padding-top: 50px; 
-    }
+    } 
 }

@@ -7,10 +7,11 @@
 
 .destinations__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 380px);
     gap: 20px;
     height: 500px;
     width: 100%;
+    overflow: scroll;
 }
 
 .card {
@@ -21,6 +22,7 @@
     background-size: cover;
     border-radius: 36px;
 }
+
 .card > span {
     font-weight: 700;
     line-height: 129%;
@@ -82,10 +84,47 @@
 .card__price {
     border-radius: 4px;
     padding: 8px 16px;
-    width: 86px;
-    height: 40px;
+    text-align: center;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
     background: rgba(255, 255, 255, 0.3);
+}
+
+/*адаптив*/
+@media screen and (max-width: 480px) {
+    .destinations__inner {
+        gap: 32px;
+    }
+
+    .destinations__list {
+        height: 400px;
+        grid-template-columns: repeat(3, 285px);
+    }
+    
+    .card {
+        border-radius: 32px;
+    }
+    
+    .card > span {
+        top: 58px;
+    }
+     
+    .card__content {
+        padding: 23px 24px;
+    }
+    
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .card-text {
+        display: none;
+    }
+    
+    .card__price {
+        border-radius: 4px;
+        padding: 12px;
+        font-size: 16px;
+    }
 }

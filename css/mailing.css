@@ -1,16 +1,16 @@
 .mailing {
-    border-radius: 6px;
-    padding: 40px 100px;
-    box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
     position: relative;
     top: 98px;
-    background-color: var(--white-text);
 }
 
 .mailing__inner {
-    display: grid;
-    grid-template-columns: 380px 536px;
+    background-color: var(--white-text);
+    border-radius: 6px;
+    box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
+    padding: 40px 100px;
+    display: flex;
     justify-content: space-between;
+    gap: 15px;
 }
 
 .mailing__title-group {
@@ -69,4 +69,46 @@ input[type='email']::placeholder {
 
 .mailing__pdp-policy-link:hover {
     color: var(--yellow-text);
+}
+
+/*адаптив*/
+@media screen and (max-width: 1280px) {
+    .mailing__inner {
+        flex-direction: column;
+    }
+    
+    .mailing__form-label {
+        width: 55%;
+    }
+
+    input[type='email'] {
+        width: 100%;
+    }
+
+    .mailing__form {
+        gap: 15px;
+    }
+
+    .mailing__inner {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mailing {
+        position: static;
+    }
+
+    .mailing__form-label {
+        width: 100%;
+    }
+
+    .mailing__inner {
+        padding: 24px;
+    }
+
+    .mailing__form {
+        flex-direction: column;
+        align-items: start;
+    }
 }

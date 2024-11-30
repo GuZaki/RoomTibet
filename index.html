@@ -54,8 +54,7 @@
             <p class="promo__title">Насладись прогулкой в горах с командой единомышленников</p>
 
             <form class="promo__form form" action="">
-                <div class="form__inputs">
-                    <div class="form__wrapper">
+                   <div class="form__wrapper">
                         <select class="select" name="location" id="location-select">
                             <option selected>Локация для тура</option>
                             <option value="location-1">Локация 1</option>
@@ -67,7 +66,7 @@
                         <span class="form__hint">выберите из списка</span>
                     </div>
 
-                    <div class="form__wrapper-date">
+                    <div class="form__wrapper">
                         <label class="select-date" for="date">Дата похода</label> 
                         <input class="input-date" type="text" id="date" disabled>
                         
@@ -85,10 +84,11 @@
 
                         <span class="form__hint">минимум 4 человека</span>
                     </div> 
-                </div>
                 
                 <button class="promo__btn btn btn-white btn-l" type="submit">Найти программу</button>
             </form>
+
+            <a class="promo__link btn btn-white btn-l" href="#">Найти программу</a>
         </div>
     </section> 
 
@@ -100,7 +100,7 @@
                 </div>
                 <div class="video-front">  
                     <a class="video-link" href="">
-                        <img class="video-img" src="./images/about/about_front.jpg" alt="Передняя картинка"> 
+                       <img class="video-img" src="./images/about/about_front.jpg" alt="Передняя картинка"> 
                     </a>
                 </div>
             </div>
@@ -112,12 +112,12 @@
                 
                 <p class="about__text text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.</p>
                 <div class="btn-flex">
-                    <a class="btn btn-green btn-l" href="#">Программа тура</a> 
+                   <a class="btn btn-green btn-l" href="#">Программа тура</a> 
                 </div>
                 
             </div>
         </div>
-    </section> 
+    </section>
 
     <section class="programs">
         <div class="container programs__inner">
@@ -229,9 +229,9 @@
         
             <div class="blog__contenet">
                 <article class="article">
-                    <a class="article__img" href="#">
+                    <div class="article__img">
                         <img src="images/blog/blog_card1.jpg" alt="">
-                    </a>
+                    </div>
 
                     <div class="article__wrapper">
                         <a class="article__contenet-link" href="#">
@@ -246,9 +246,9 @@
                 </article> 
 
                 <article class="article">
-                    <a class="article__img" href="#">
+                    <div class="article__img">
                         <img src="images/blog/blog_card2.jpg" alt="">
-                    </a>
+                    </div>
 
                     <div class="article__wrapper">
                         <a class="article__contenet-link" href="#">
@@ -263,9 +263,9 @@
                 </article>
             
                 <article class="article">
-                    <a class="article__img" href="#">
+                    <div class="article__img">
                         <img src="images/blog/blog_card3.jpg" alt="">
-                    </a>
+                    </div>
 
                     <div class="article__wrapper">
                         <a class="article__contenet-link" href="#">
@@ -280,9 +280,9 @@
                 </article>
             
                 <article class="article">
-                    <a class="article__img" href="#">
+                    <div class="article__img">
                         <img src="images/blog/blog_card4.jpg" alt="">
-                    </a>
+                    </div>
 
                     <div class="article__wrapper">
                         <a class="article__contenet-link" href="#">
@@ -313,44 +313,34 @@
             <div class="pinterest__content">
                 <div class="pinterest__content-item">
                     <a href="" class="pinterest__link">
-                        <picture class="pinterest__img">
-                            <img src="images/pinterest/pinterest_1.jpg" alt="Фото 1">
-                        </picture>
+                        
+                            <img class="pinterest__img" src="images/pinterest/pinterest_1.jpg" alt="Фото 1">
+                        
                     </a>
                 </div>
                 <div class="pinterest__content-item">
                     <a href="" class="pinterest__link">
-                        <picture class="pinterest__img">
-                            <img src="images/pinterest/pinterest_2.jpg" alt="Фото 2">
-                        </picture>
+                            <img class="pinterest__img" src="images/pinterest/pinterest_2.jpg" alt="Фото 2">
                     </a>
                 </div>
                 <div class="pinterest__content-item">
                     <a href="" class="pinterest__link">
-                        <picture class="pinterest__img">
-                            <img src="images/pinterest/pinterest_3.jpg" alt="Фото 3">
-                        </picture>
+                            <img class="pinterest__img" src="images/pinterest/pinterest_3.jpg" alt="Фото 3">
                     </a>
                 </div>
                 <div class="pinterest__content-item">
                     <a href="" class="pinterest__link">
-                        <picture class="pinterest__img">
-                            <img src="images/pinterest/pinterest_4.jpg" alt="Фото 4">
-                        </picture>
+                            <img class="pinterest__img" src="images/pinterest/pinterest_4.jpg" alt="Фото 4">
                     </a>
                 </div>
                 <div class="pinterest__content-item">
                     <a href="" class="pinterest__link">
-                        <picture class="pinterest__img">
-                            <img src="images/pinterest/pinterest_5.jpg" alt="Фото 5">
-                        </picture>
+                            <img class="pinterest__img" src="images/pinterest/pinterest_5.jpg" alt="Фото 5">
                     </a>
                 </div>
                 <div class="pinterest__content-item">
                     <a href="" class="pinterest__link">
-                        <picture class="pinterest__img">
-                            <img src="images/pinterest/pinterest_6.jpg" alt="Фото 6">
-                        </picture>
+                            <img class="pinterest__img" src="images/pinterest/pinterest_6.jpg" alt="Фото 6">
                     </a>
                 </div>
             </div>
@@ -358,7 +348,7 @@
                 <a class="btn btn-green btn-l" href="#">Наш pinterest</a>
             </div>
         </div>
-    </section>
+    </section> 
 
     <section class="mailing container">
         <div class=" mailing__inner">
@@ -371,7 +361,7 @@
             <div class="mailing__rigth">
                 <form class="mailing__form" action="">
                     <label class="mailing__form-label">Введите e-mail адрес
-                        <input type="email" placeholder="name@domain.com"> 
+                       <input type="email" placeholder="name@domain.com"> 
                     </label>
                     
                     <button class="btn btn-green btn-s btn-form">Подписаться на новости</button>
@@ -382,7 +372,7 @@
                 </span>
             </div>
         </div>
-    </section> 
+    </section>
 
     <footer class="footer">
         <div class="footer__top">
