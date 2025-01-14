@@ -11,7 +11,7 @@
     gap: 20px;
     height: 500px;
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .card {
@@ -109,7 +109,7 @@
     .card > span {
         top: 58px;
     }
-     
+    
     .card__content {
         padding: 23px 24px;
     }
